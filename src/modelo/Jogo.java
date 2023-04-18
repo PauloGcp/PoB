@@ -1,14 +1,14 @@
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 package modelo;
 
 import java.util.ArrayList;
 
 public class Jogo {
-	private int id;
+	private int id; //autogerado
 	private String data;
 	private String local;
 	private int estoque;
@@ -18,7 +18,7 @@ public class Jogo {
 	private ArrayList<Ingresso> ingressos = new ArrayList<>();
 
 	public Jogo(String data, String local, int estoque, double preco) {
-		//id será gerado pelo banco;
+		//id serï¿½ gerado pelo banco;
 		this.data = data;
 		this.local = local;
 		this.estoque = estoque;

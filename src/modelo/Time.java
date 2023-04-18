@@ -1,7 +1,7 @@
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 package modelo;
 
@@ -25,6 +25,16 @@ public class Time {
 			soma = soma + j.obterValorArrecadado();
 		
 		return soma;
+	}
+	
+	
+
+	public ArrayList<Jogo> getJogos() {
+		return jogos;
+	}
+
+	public void setJogos(ArrayList<Jogo> jogos) {
+		this.jogos = jogos;
 	}
 
 	public void adicionar(Jogo j) {

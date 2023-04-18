@@ -20,5 +20,13 @@ public class DAOIngresso extends DAO<Ingresso>{
 			return null;
 		}
 	}
+	public List<Ingresso> ingressosPorJogo(Object chave) {
+	    int idJogo = (int) chave;
+	    Query 	q = manager	.query();
+	    q.constrain(Ingresso.class);
+	    q.descend("jogo").descend("id").constrain(idJogo);
 	
+	    return q.execute();
+	}
+		
 }

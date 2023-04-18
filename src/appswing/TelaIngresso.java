@@ -1,7 +1,7 @@
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 
 package appswing;
@@ -160,7 +160,7 @@ public class TelaIngresso {
 		label_3 = new JLabel("codigo:");
 		label_3.setHorizontalAlignment(SwingConstants.LEFT);
 		label_3.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		label_3.setBounds(284, 261, 63, 14);
+		label_3.setBounds(284, 261, 125, 14);
 		frame.getContentPane().add(label_3);
 
 		button_2 = new JButton("Cancelar Ingresso");
@@ -168,7 +168,7 @@ public class TelaIngresso {
 			public void actionPerformed(ActionEvent e) {
 				try{
 					if (table.getSelectedRow() >= 0){
-						String codigo = (String) table.getValueAt( table.getSelectedRow(), 1);
+						String codigo = (String)""+ table.getValueAt( table.getSelectedRow(), 1);
 						Fachada.apagarIngresso(Integer.parseInt(codigo));
 						label.setText("cancelou ingresso " +codigo);
 						listagem();
@@ -177,6 +177,7 @@ public class TelaIngresso {
 						label.setText("ingresso nao selecionado");
 				}
 				catch(Exception ex) {
+					System.out.println(ex);
 					label.setText(ex.getMessage());
 				}
 			}
@@ -195,7 +196,10 @@ public class TelaIngresso {
 					do{
 						try {
 							id = JOptionPane.showInputDialog("digite o id do jogo ou <enter>");
-							lista.add(Integer.parseInt(id));
+							String temp[] = id.split(",");
+							for (String i: temp) {
+								lista.add(Integer.parseInt(i));
+							}
 						}
 						catch(NumberFormatException ex) {
 							label.setText("id nao numerico:");
@@ -204,11 +208,13 @@ public class TelaIngresso {
 
 					//converter o arraylist num array
 					int[] array = lista.stream().mapToInt(Integer::intValue).toArray();
+					System.out.println("array, " +array);
 					IngressoGrupo ingresso = Fachada.criarIngressoGrupo(array);
+					System.out.println("ingresso, " +ingresso);
+					listagem();
 					label_3.setText("Codigo:" + ingresso.getCodigo());
 					label_2.setText("Jogos:" + array);
 					label.setText("ingresso criado: ");
-					listagem();
 				}catch(Exception ex) {
 					label.setText(ex.getMessage());
 				}
