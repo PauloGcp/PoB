@@ -25,23 +25,32 @@ public class DAOTime extends DAO<Time>{
 	public List<Time> timesQuePossuemJogosComIngressoDisponivel() {
 		Query q = manager.query();
 		q.constrain(Time.class);
-		q.descend("jogos").descend("ingressos").descend("estoque").constrain(1).greater();
+		q.descend("jogos").descend("estoque").constrain(0).greater();
 		return q.execute();
+	}
+	
+	
+	public List<Time> timesPorJogo(Object chave) {
+	    int idJogo = (int) chave;
+	    Query q= manager.query();
+	    q.constrain(Time.class);
+	    q.descend("jogos").descend("id").constrain(idJogo);
+	    return q.execute();
 	}
 	
 	public List<Time> timesQueJogaraoEmDeterminadoLocal(Object chave) {
 		String local = (String)chave;
 		Query q = manager.query();
 		q.constrain(Time.class);
-		q.descend("jogos").constrain(local);
+		q.descend("jogos").descend("local").constrain(local);
 		return q.execute();
 	}
 	
-	public List<Time> timesQueEnfretaráDeterminadoAdversario(Object chave) {
-		String adversario = (String)chave;
-		Query q = manager.query();
-		q.constrain(Time.class);
-		q.descend("jogos").descend("time1").constrain(adversario).or(q.descend("jogos").descend("time2").constrain(adversario));
-		return q.execute();
+	public List<Time> timesQueJogaraoEmDeterminadaData(Object chave) {
+	    String data = (String) chave;
+	    Query q = manager.query();
+	    q.constrain(Time.class);
+	    q.descend("jogos").descend("data").constrain(data);
+	    return q.execute();
 	}
 }

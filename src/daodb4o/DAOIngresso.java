@@ -28,5 +28,4 @@ public class DAOIngresso extends DAO<Ingresso>{
 	
 	    return q.execute();
 	}
-		
 }

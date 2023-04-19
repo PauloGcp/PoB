@@ -11,39 +11,36 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.text.ParseException;
+
 import java.util.List;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
-import javax.swing.JFormattedTextField;
+import javax.swing.JComboBox;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
-import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.text.MaskFormatter;
 
+
+import modelo.Ingresso;
+import modelo.IngressoGrupo;
+import modelo.IngressoIndividual;
+import modelo.Jogo;
 import modelo.Time;
 import regras_negocio.Fachada;
 
 public class TelaConsulta {
-	private JFrame frame;
+	private JFrame frmConsulta;
 	private JTable table;
 	private JScrollPane scrollPane;
-	private JButton button;
-	private JButton button_4;
-	private JTextField textField_1;
 	private JLabel label;
-	private JLabel label_5;
 	private JLabel label_8;
-	private JLabel label_2;
-	private JTextField textField;
-	private JButton button_2;
 
 
 
@@ -68,7 +65,7 @@ public class TelaConsulta {
 	 */
 	public TelaConsulta() {
 		initialize();
-		frame.setVisible(true);
+		frmConsulta.setVisible(true);
 	}
 	
 
@@ -76,13 +73,12 @@ public class TelaConsulta {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 12));
-		frame.addWindowListener(new WindowAdapter() {
+		frmConsulta = new JFrame();
+		frmConsulta.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 12));
+		frmConsulta.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowOpened(WindowEvent e) {
 				Fachada.inicializar();
-				listagem();
 			}
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -90,14 +86,14 @@ public class TelaConsulta {
 			}
 		});
 
-		frame.setTitle("Times");
-		frame.setBounds(100, 100, 912, 351);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmConsulta.setTitle("Consulta");
+		frmConsulta.setBounds(100, 100, 1042, 351);
+		frmConsulta.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frmConsulta.getContentPane().setLayout(null);
 
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(26, 42, 844, 120);
-		frame.getContentPane().add(scrollPane);
+		scrollPane.setBounds(26, 74, 844, 120);
+		frmConsulta.getContentPane().add(scrollPane);
 
 		table = new JTable();
 		table.setGridColor(Color.BLACK);
@@ -113,108 +109,156 @@ public class TelaConsulta {
 		table.setShowGrid(true);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 
-
-		button = new JButton("Criar time");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {
-					if(textField_1.getText().isEmpty() ||
-					   textField.getText().isEmpty() )
-					{
-						label.setText("campo vazio");
-						return;
-					}
-
-					
-					String nome = textField.getText();
-					String origem = textField_1.getText();
-					Time time = Fachada.criarTime(nome, origem);
-					label.setText("time criado: "+time.getNome());
-					listagem();
-				}
-				catch(Exception ex) {
-					label.setText(ex.getMessage());
-				}
-			}
-		});
-		button.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		button.setBounds(314, 188, 95, 23);
-		frame.getContentPane().add(button);
-
 		label = new JLabel("");
+		label.setBounds(26, 254, 990, 47);
 		label.setForeground(Color.BLUE);
 		label.setBackground(Color.RED);
-		label.setBounds(26, 287, 830, 14);
-		frame.getContentPane().add(label);
-
-		label_5 = new JLabel("Origem");
-		label_5.setHorizontalAlignment(SwingConstants.LEFT);
-		label_5.setFont(new Font("Dialog", Font.PLAIN, 12));
-		label_5.setBounds(26, 216, 50, 14);
-		frame.getContentPane().add(label_5);
-
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Dialog", Font.PLAIN, 12));
-		textField_1.setColumns(10);
-		textField_1.setBounds(70, 213, 169, 20);
-		frame.getContentPane().add(textField_1);
+		frmConsulta.getContentPane().add(label);
 
 		label_8 = new JLabel("selecione");
-		label_8.setBounds(26, 163, 561, 14);
-		frame.getContentPane().add(label_8);
-
-		button_4 = new JButton("Listar times com ingressos disponiveis: ");
-		button_4.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		button_4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				listagem();
-			}
-		});
-		button_4.setBounds(26, 253, 243, 23);
-		frame.getContentPane().add(button_4);
-
-		label_2 = new JLabel("Nome");
-		label_2.setHorizontalAlignment(SwingConstants.LEFT);
-		label_2.setFont(new Font("Dialog", Font.PLAIN, 12));
-		label_2.setBounds(26, 188, 50, 14);
-		frame.getContentPane().add(label_2);
-
-		textField = new JTextField();
-		textField.setFont(new Font("Dialog", Font.PLAIN, 12));
-		textField.setColumns(10);
-		textField.setBounds(70, 188, 169, 20);
-		frame.getContentPane().add(textField);
+		label_8.setBounds(26, 205, 561, 14);
+		frmConsulta.getContentPane().add(label_8);
 		
-		button_2 = new JButton("Apagar time");
-		button_2.addActionListener(new ActionListener() {
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Times que jogarão em determinada data", "Times de determinado jogo", "Times que Jogarão em determinado local", "Times que possuem jogos com ingresso disponivel", "Jogos por time"}));
+		comboBox.setToolTipText("");
+		comboBox.setBounds(32, 22, 381, 22);
+		frmConsulta.getContentPane().add(comboBox);
+		
+		JButton btnNewButton = new JButton("consultar");
+		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				try{
-					if (table.getSelectedRow() >= 0){
-						String nomeTime = (String) ""+table.getValueAt( table.getSelectedRow(), 0);
-						Fachada.apagarTime(nomeTime);
-						label.setText("apagou o time " +nomeTime);
-						listagem();
+				try {
+				int index = comboBox.getSelectedIndex();
+				if(index < 0)
+					label_8.setText("consulta nao selecionada");
+				else
+					switch(index) {
+					case 0:
+						String data = JOptionPane.showInputDialog("digite a data do jogo");
+						List<Time> resultado1 = Fachada.timesQueJogaraoEmDeterminadaData(data);
+						listagemTime(resultado1);
+						break;
+					case 1:
+						String codJogo = JOptionPane.showInputDialog("digite o id do jogo");
+						List<Time> resultado2 = Fachada.timesPorJogo(Integer.parseInt(codJogo));
+						listagemTime(resultado2);
+						break;
+					case 2:
+						String local = JOptionPane.showInputDialog("digite o local");												
+						List<Time> resultado3 = Fachada.timesQueJogaraoEmDeterminadoLocal(local);
+						timesQueJogaraoEmDeterminadoLocal(resultado3);
+						break;
+					case 3:
+						List<Time> resultado4 = Fachada.timesQuePossuemJogosComIngressoDisponivel();
+						listagemTime(resultado4);
+						break;
+					case 4:
+						String time2 = JOptionPane.showInputDialog("digite o time");
+						List<Jogo> resultado5 = Fachada.jogosPorTime(time2);
+						jogosPorTime(resultado5);
+						break;	
 					}
-					else
-						label.setText("time nao selecionado");
-				}
-				catch(Exception ex) {
-					System.out.println(ex);
-					label.setText(ex.getMessage());
-				}
-
 			}
-		});
-		button_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		button_2.setBounds(314, 238, 123, 23);
-		frame.getContentPane().add(button_2);
+			catch(Exception erro) {
+				DefaultTableModel model = new DefaultTableModel();
+				table.setModel(model);
+				label_8.setText(erro.getMessage());
+			}
+		}});
+		btnNewButton.setBounds(456, 22, 89, 23);
+		frmConsulta.getContentPane().add(btnNewButton);
 	}
 
 	//*****************************
-	public void listarTimesComIngressoDisponivel () {
+	public void timesQueJogaraoEmDeterminadoLocal (List<Time> lista) {
+		try{	
+			DefaultTableModel model = new DefaultTableModel();
+			//colunas
+			model.addColumn("nome");
+			model.addColumn("origem");
+			model.addColumn("Quantidade de jogos");
+			//linhas
+			for(Time time : lista) {
+				model.addRow(new Object[]{time.getNome()+"", time.getOrigem(), time.getJogos().size()});
+			}
+			table.setModel(model);
+			label_8.setText("resultados: "+lista.size()+ " times que jogaram na localização");
+			
+			//model contem todas as linhas e colunas da tabela
+		}
+		catch(Exception erro){
+			label.setText(erro.getMessage());
+		}
+	}
+	
+	public void listagemIngresso(List<Ingresso> lista) {
 		try{
-			List<Time> lista = Fachada.timesQuePossuemJogosComIngressoDisponivel();
+			
+			//model contem todas as linhas e colunas da tabela
+			DefaultTableModel model = new DefaultTableModel();
 
+			//colunas
+			model.addColumn("tipo");
+			model.addColumn("codigo");
+			model.addColumn("valor");
+			model.addColumn("jogos");
+
+			//linhas
+			String texto;
+			for(Ingresso ingresso : lista) {
+				if(ingresso instanceof IngressoIndividual ind) {
+					int id = ind.getJogo().getId();
+					model.addRow(new Object[]{"Individual" ,ingresso.getCodigo(), ingresso.calcularValor(), id});
+				}
+				else 	
+					if(ingresso instanceof IngressoGrupo gp) {
+						texto="";
+						for(Jogo j : gp.getJogos()) 	//obter os id  dos jogos
+							texto += j.getId()+ "," ;
+
+						model.addRow(new Object[]{"Grupo" ,ingresso.getCodigo(), ingresso.calcularValor(), texto});
+					}
+			}
+			
+			table.setModel(model);
+		}
+		catch(Exception erro){
+			label.setText(erro.getMessage());
+		}
+	}
+	
+	public void listagemIngressoGrupo(List<IngressoGrupo> lista) {
+		try{
+			
+			//model contem todas as linhas e colunas da tabela
+			DefaultTableModel model = new DefaultTableModel();
+
+			//colunas
+			model.addColumn("tipo");
+			model.addColumn("codigo");
+			model.addColumn("valor");
+			model.addColumn("jogos");
+
+			//linhas
+			String texto;
+			
+			texto="";
+	
+			model.addRow(new Object[]{"Grupo" ,((Ingresso) lista).getCodigo(), ((Ingresso) lista).calcularValor(), texto});
+			
+			
+			table.setModel(model);
+		}
+		catch(Exception erro){
+			label.setText(erro.getMessage());
+		}
+	}
+	
+	
+	
+	public void listagemTime(List<Time> lista) {
+		try{
 			//model contem todas as linhas e colunas da tabela
 			DefaultTableModel model = new DefaultTableModel();
 			//colunas
@@ -226,7 +270,33 @@ public class TelaConsulta {
 				model.addRow(new Object[]{time.getNome()+"", time.getOrigem(), time.getJogos().size()});
 			}
 			table.setModel(model);
-			label_8.setText("resultados: "+lista.size()+ " times que possuem ingressos disponiveis");
+			
+		}
+		catch(Exception erro){
+			label.setText(erro.getMessage());
+		}
+	}
+	
+	public void jogosPorTime(List<Jogo> lista) {
+		try{
+			//model contem todas as linhas e colunas da tabela
+			DefaultTableModel model = new DefaultTableModel();
+			//colunas
+			model.addColumn("id");
+			model.addColumn("data");
+			model.addColumn("loca");
+			model.addColumn("estoque");
+			model.addColumn("preco");
+			model.addColumn("time1");
+			model.addColumn("time2");
+			model.addColumn("arrecadacao");
+			//linhas
+			for(Jogo jogo : lista) {
+				model.addRow(new Object[]{jogo.getId()+"", jogo.getData(), jogo.getLocal(), jogo.getEstoque(),jogo.getPreco(),
+						jogo.getTime1().getNome(), jogo.getTime2().getNome(), jogo.obterValorArrecadado()});
+			}
+			table.setModel(model);
+			label_8.setText("O time tem "+lista.size()+ " jogos marcados");
 		}
 		catch(Exception erro){
 			label.setText(erro.getMessage());

@@ -152,11 +152,10 @@ public class Fachada {
 		Time time1 = daotime.read(nometime1);
 		Time time2 = daotime.read(nometime2);
 		if (time1 == null || time2 == null) {
-			System.out.println(" nao ta passando da exceção");
 			throw new Exception("Times inválidos.");
 		}
 
-		System.out.println("ta passando da exceção");
+
 		// criar jogo
 		Jogo jogo = new Jogo(data, local, estoque, preco);
 
@@ -178,7 +177,6 @@ public class Fachada {
 		// verificar regras de negocio
 		Jogo jogo = daojogo.read(id);
 		if (jogo != null) {
-			System.out.println("ta tentando criar?");
 			// array com todos os id já registrados
 			ArrayList<Integer> ingressosId = new ArrayList<>();
 			for (Ingresso i : jogo.getIngressos()) {
@@ -274,12 +272,13 @@ public class Fachada {
 		}
 
 		if (ingresso instanceof IngressoGrupo) {
-			System.out.println("grupo");
+			
 			ArrayList<Jogo> jogosGrupo = ((IngressoGrupo) ingresso).getJogos();
 			((IngressoGrupo) ingresso).setJogos(null);
 			for (Jogo j : jogosGrupo) {
 				j.remover(ingresso);
 				j.setEstoque(j.getEstoque() + 1);
+				daojogo.update(j);
 				// nao precisa remover o jogo do ingresso pq o ingresso será deletado
 				// ((IngressoGrupo) ingresso).remover(j);
 			}
@@ -291,6 +290,7 @@ public class Fachada {
 			((IngressoIndividual) ingresso).setJogo(null);
 			jogoIndividual.remover(ingresso);
 			jogoIndividual.setEstoque(jogoIndividual.getEstoque()+1);
+			daojogo.update(jogoIndividual);
 			daoingresso.delete(ingresso);
 		}
 		DAO.commit();
@@ -339,15 +339,6 @@ public class Fachada {
 		DAO.commit();
 		return ingressos;
  	}
-	public static List<Time> timesQueEnfretaráDeterminadoAdversario(String time) throws Exception {
-		DAO.begin();
-		List<Time> times = daotime.timesQueEnfretaráDeterminadoAdversario(time);
-		if (times.size() == 0) {
-			throw new Exception("Nehum time enfrentará esse adversario");
-		}
-		DAO.commit();
-		return null;
- 	}   
 	public static List<Time> timesQueJogaraoEmDeterminadoLocal(String local) throws Exception{
 		DAO.begin();
 		List<Time> times = daotime.timesQueJogaraoEmDeterminadoLocal(local);
@@ -357,6 +348,25 @@ public class Fachada {
 		DAO.commit();
 		return times;
 	}
+	public static List<Time> timesPorJogo(int idJogo) throws Exception{
+		DAO.begin();
+		List<Time> times = daotime.timesPorJogo(idJogo);
+		if (times.size() == 0) {
+			throw new Exception("Jogo não encontrado");
+		}
+		DAO.commit();
+		return times;
+	}
+	public static List<Time> timesQueJogaraoEmDeterminadaData(Object chave) throws Exception {
+		DAO.begin();
+		List<Time> times = daotime.timesQueJogaraoEmDeterminadaData(chave);
+		if (times.size() == 0) {
+			throw new Exception("Nenhum time jogará nessa data");
+		}
+		DAO.commit();
+		return times;
+	}
+	
 	public static List<Time> timesQuePossuemJogosComIngressoDisponivel() throws Exception {
 		DAO.begin();
 		List<Time> times = daotime.timesQuePossuemJogosComIngressoDisponivel();
@@ -366,12 +376,19 @@ public class Fachada {
 		DAO.commit();
 		return times;
 	}
-
+//	public static List<IngressoGrupo> ingressoGrupoComMaisDeDoisJogos() throws Exception {
+//		DAO.begin();
+//		List<IngressoGrupo> ingressos = daoingressogrupo.ingressoGrupoComMaisDeDoisJogos();
+//		if (ingressos.size() == 0) {
+//			throw new Exception("Nao existe ingressos para esse jogo");
+//		}
+//		DAO.commit();
+//		return ingressos;
+// 	}
+	
 	public static List<Jogo> jogosPorTime(String time) throws Exception {
 		DAO.begin();
 		List<Jogo> jogos = daojogo.jogosPorTime(time);
-		System.out.println(jogos);
-		System.out.println(time);
 		if (jogos.size() == 0) {
 			throw new Exception("Sem jogos");
 		}
