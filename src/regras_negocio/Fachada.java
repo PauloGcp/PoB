@@ -10,13 +10,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import daodb4o.DAO;
-import daodb4o.DAOIngresso;
-import daodb4o.DAOIngressoGrupo;
-import daodb4o.DAOIngressoIndividual;
-import daodb4o.DAOJogo;
-import daodb4o.DAOTime;
-import daodb4o.DAOUsuario;
+import daojpa.DAO;
+import daojpa.DAOIngresso;
+import daojpa.DAOIngressoGrupo;
+import daojpa.DAOIngressoIndividual;
+import daojpa.DAOJogo;
+import daojpa.DAOTime;
+import daojpa.DAOUsuario;
 import modelo.Ingresso;
 import modelo.IngressoGrupo;
 import modelo.IngressoIndividual;
@@ -198,7 +198,13 @@ public class Fachada {
 			daojogo.update(jogo);
 			// gravar ingresso no banco
 			daoingressoindividual.create(ingresso);
-			DAO.commit();
+			try {				
+				DAO.commit();
+			} catch (Exception e){
+				System.out.println(e.getMessage());
+				DAO.rollback();
+				throw e;
+			}
 			return ingresso;
 		}
 		throw new Exception("Jogo nao encontrado");
@@ -256,7 +262,14 @@ public class Fachada {
 		}
 		// gravar ingresso no banco
 		daoingressogrupo.create(ingresso);
-		DAO.commit();
+		try {				
+			DAO.commit();
+		} catch (Exception e){
+			System.out.println(e.getMessage());
+			DAO.rollback();
+			throw e;
+		}
+		
 		return ingresso;
 	}
 

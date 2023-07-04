@@ -1,0 +1,98 @@
+[EL Fine]: server: 2023-07-03 23:05:28.226--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2023-07-03 23:05:28.336--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Time] is set to [FIELD].
+[EL Config]: metadata: 2023-07-03 23:05:28.35--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field jogos] is being defaulted to: class modelo.Jogo.
+[EL Config]: metadata: 2023-07-03 23:05:28.351--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Ingresso] is set to [FIELD].
+[EL Config]: metadata: 2023-07-03 23:05:28.351--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.IngressoGrupo] is set to [FIELD].
+[EL Config]: metadata: 2023-07-03 23:05:28.351--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field jogos] is being defaulted to: class modelo.Jogo.
+[EL Config]: metadata: 2023-07-03 23:05:28.351--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Jogo] is set to [FIELD].
+[EL Config]: metadata: 2023-07-03 23:05:28.352--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to one mapping element [field time1] is being defaulted to: class modelo.Time.
+[EL Config]: metadata: 2023-07-03 23:05:28.352--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to one mapping element [field time2] is being defaulted to: class modelo.Time.
+[EL Config]: metadata: 2023-07-03 23:05:28.353--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field ingressos] is being defaulted to: class modelo.Ingresso.
+[EL Config]: metadata: 2023-07-03 23:05:28.354--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.IngressoIndividual] is set to [FIELD].
+[EL Config]: metadata: 2023-07-03 23:05:28.354--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field jogos] is being defaulted to: class modelo.Jogo.
+[EL Config]: metadata: 2023-07-03 23:05:28.354--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Usuario] is set to [FIELD].
+[EL Config]: metadata: 2023-07-03 23:05:28.354--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Time] is being defaulted to: Time.
+[EL Config]: metadata: 2023-07-03 23:05:28.355--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Time] is being defaulted to: TIME.
+[EL Config]: metadata: 2023-07-03 23:05:28.361--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [origem] is being defaulted to: ORIGEM.
+[EL Config]: metadata: 2023-07-03 23:05:28.362--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2023-07-03 23:05:28.362--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.IngressoGrupo] is being defaulted to: IngressoGrupo.
+[EL Config]: metadata: 2023-07-03 23:05:28.362--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Ingresso] is being defaulted to: Ingresso.
+[EL Config]: metadata: 2023-07-03 23:05:28.363--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Ingresso] is being defaulted to: INGRESSO.
+[EL Config]: metadata: 2023-07-03 23:05:28.363--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [codigo] is being defaulted to: CODIGO.
+[EL Config]: metadata: 2023-07-03 23:05:28.363--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.IngressoGrupo] is being defaulted to: INGRESSOGRUPO.
+[EL Config]: metadata: 2023-07-03 23:05:28.363--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [codigo] is being defaulted to: CODIGO.
+[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Jogo] is being defaulted to: Jogo.
+[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Jogo] is being defaulted to: JOGO.
+[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [estoque] is being defaulted to: ESTOQUE.
+[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [data] is being defaulted to: DATA.
+[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [local] is being defaulted to: LOCAL.
+[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.IngressoIndividual] is being defaulted to: IngressoIndividual.
+[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.IngressoIndividual] is being defaulted to: INGRESSOINDIVIDUAL.
+[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [codigo] is being defaulted to: CODIGO.
+[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Usuario] is being defaulted to: Usuario.
+[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [senha] is being defaulted to: SENHA.
+[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
+[EL Config]: metadata: 2023-07-03 23:05:28.373--ServerSession(1519736165)--Thread(Thread[main,5,main])--The join table name for the many to many mapping [field jogos] is being defaulted to: TIME_JOGO.
+[EL Config]: metadata: 2023-07-03 23:05:28.374--ServerSession(1519736165)--Thread(Thread[main,5,main])--The source primary key column name for the many to many mapping [field jogos] is being defaulted to: NOME.
+[EL Config]: metadata: 2023-07-03 23:05:28.374--ServerSession(1519736165)--Thread(Thread[main,5,main])--The source foreign key column name for the many to many mapping [jogos] is being defaulted to: Time_NOME.
+[EL Config]: metadata: 2023-07-03 23:05:28.374--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target primary key column name for the many to many mapping [field jogos] is being defaulted to: ID.
+[EL Config]: metadata: 2023-07-03 23:05:28.375--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target foreign key column name for the many to many mapping [jogos] is being defaulted to: jogos_ID.
+[EL Config]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field time1] is being defaulted to: NOME.
+[EL Config]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [time1] is being defaulted to: TIME1_NOME.
+[EL Config]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field time2] is being defaulted to: NOME.
+[EL Config]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [time2] is being defaulted to: TIME2_NOME.
+[EL Warning]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--Element [field ingressos] within entity class [class modelo.Jogo] uses a collection type [class java.util.ArrayList] when the Jakarta Persistence specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The join table name for the many to many mapping [field ingressos] is being defaulted to: JOGO_INGRESSO.
+[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The source primary key column name for the many to many mapping [field ingressos] is being defaulted to: ID.
+[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The source foreign key column name for the many to many mapping [ingressos] is being defaulted to: Jogo_ID.
+[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target primary key column name for the many to many mapping [field ingressos] is being defaulted to: CODIGO.
+[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target foreign key column name for the many to many mapping [ingressos] is being defaulted to: ingressos_CODIGO.
+[EL Info]: 2023-07-03 23:05:28.428--ServerSession(1519736165)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 4.0.1.v202302241130
+[EL Fine]: connection: 2023-07-03 23:05:28.588--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQL10Platform
+[EL Fine]: connection: 2023-07-03 23:05:28.599--ServerSession(1519736165)--Connection(896982466)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+	platform=>PostgreSQL10Platform
+	user name=> "postgres"
+	datasource URL=> "jdbc:postgresql://localhost:5432/ticket"
+))
+[EL Config]: connection: 2023-07-03 23:05:28.738--ServerSession(1519736165)--Connection(901205084)--Thread(Thread[main,5,main])--Connected: jdbc:postgresql://localhost:5432/ticket
+	User: postgres
+	Database: PostgreSQL  Version: 14.8
+	Driver: PostgreSQL JDBC Driver  Version: 42.6.0
+[EL Warning]: metadata: 2023-07-03 23:05:28.744--ServerSession(1519736165)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [ingressos] for the entity class [class modelo.Jogo] since weaving was not enabled or did not occur.
+[EL Fine]: connection: 2023-07-03 23:05:28.759--ServerSession(1519736165)--Thread(Thread[main,5,main])--/file:/D:/Paulo Guilherme/Downloads/DB4O-TicketNow/DB4O-TicketNow/target/classes/_eclipselink-postgresql_url=jdbc:postgresql://localhost:5432/ticket_user=postgres login successful
+[EL Fine]: sql: 2023-07-03 23:05:28.891--ServerSession(1519736165)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME
+[EL Fine]: sql: 2023-07-03 23:05:28.901--ClientSession(742255664)--Connection(901205084)--Thread(Thread[main,5,main])--INSERT INTO TIME (NOME, ORIGEM) VALUES (?, ?)
+	bind => [teste1, origem1]
+[EL Fine]: sql: 2023-07-03 23:05:28.903--ClientSession(742255664)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME
+[EL Fine]: sql: 2023-07-03 23:05:28.914--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--INSERT INTO TIME (NOME, ORIGEM) VALUES (?, ?)
+	bind => [teste2, origem2]
+[EL Fine]: sql: 2023-07-03 23:05:28.915--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [teste1]
+[EL Fine]: sql: 2023-07-03 23:05:28.916--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [teste3]
+[EL Fine]: sql: 2023-07-03 23:05:28.918--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [teste3]
+[EL Fine]: sql: 2023-07-03 23:05:28.92--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO, TIME1_NOME, TIME2_NOME FROM JOGO WHERE (ID = ?)
+	bind => [999]
+[EL Fine]: sql: 2023-07-03 23:05:28.922--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO, TIME1_NOME, TIME2_NOME FROM JOGO
+[EL Fine]: sql: 2023-07-03 23:05:28.926--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-03 23:05:28.926--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-03 23:05:28.928--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT t1.CODIGO FROM JOGO_INGRESSO t0, INGRESSOGRUPO t1 WHERE ((t0.Jogo_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [1]
+[EL Fine]: sql: 2023-07-03 23:05:28.931--ClientSession(403598020)--Thread(Thread[main,5,main])--SELECT 1
+[EL Warning]: 2023-07-03 23:05:28.932--UnitOfWork(1673916398)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Dica: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Posição: 98
+Error Code: 0
+Call: SELECT t1.CODIGO FROM JOGO_INGRESSO t0, INGRESSOGRUPO t1 WHERE ((t0.Jogo_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [1]
+Query: ReadAllQuery(name="ingressos" referenceClass=IngressoGrupo sql="SELECT t1.CODIGO FROM JOGO_INGRESSO t0, INGRESSOGRUPO t1 WHERE ((t0.Jogo_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))")
+[EL Fine]: connection: 2023-07-03 23:05:28.98--ServerSession(1519736165)--Connection(901205084)--Thread(Thread[main,5,main])--disconnect
+[EL Fine]: connection: 2023-07-03 23:05:28.98--ServerSession(1519736165)--Thread(Thread[main,5,main])--/file:/D:/Paulo Guilherme/Downloads/DB4O-TicketNow/DB4O-TicketNow/target/classes/_eclipselink-postgresql_url=jdbc:postgresql://localhost:5432/ticket_user=postgres logout successful
+[EL Fine]: connection: 2023-07-03 23:05:28.98--ServerSession(1519736165)--Connection(896982466)--Thread(Thread[main,5,main])--disconnect

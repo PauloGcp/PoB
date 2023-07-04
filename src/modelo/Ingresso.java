@@ -1,18 +1,27 @@
 /**********************************
  * IFPB - Curso Superior de Tec. em Sist. para Internet
  * Persistencia de objetos
- * Prof. Fausto Maranhão Ayres
+ * Prof. Fausto Maranhï¿½o Ayres
  **********************************/
 
 package modelo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Ingresso  {
+	@Id
 	protected int codigo;
 	
 	public Ingresso(int codigo) {
 		this.codigo = codigo;
 	}
-
+	public Ingresso() {
+	}
 	public abstract double calcularValor();
 
 	public int getCodigo() {

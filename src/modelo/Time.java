@@ -7,12 +7,24 @@ package modelo;
 
 import java.util.ArrayList;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
+
+@Entity
 public class Time {
+	@Id
 	private String nome;
 	private String origem;
-	private ArrayList<Jogo> jogos = new ArrayList<>();
+	@ManyToMany(cascade= {CascadeType.PERSIST, CascadeType.MERGE})
+	private List<Jogo> jogos = new ArrayList<>();
 
-	
+	public Time() {
+	}
 	public Time(String nome, String origem) {
 		super();
 		this.nome = nome;
@@ -30,7 +42,7 @@ public class Time {
 	
 
 	public ArrayList<Jogo> getJogos() {
-		return jogos;
+		return (ArrayList<Jogo>) jogos;
 	}
 
 	public void setJogos(ArrayList<Jogo> jogos) {

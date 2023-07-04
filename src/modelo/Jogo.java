@@ -7,16 +7,32 @@ package modelo;
 
 import java.util.ArrayList;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToOne;
+
+@Entity
 public class Jogo {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id; //autogerado
 	private String data;
 	private String local;
 	private int estoque;
 	private double preco;
+	@OneToOne
 	private Time time1;
+	@OneToOne
 	private Time time2;
+	@ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.REMOVE})
 	private ArrayList<Ingresso> ingressos = new ArrayList<>();
 
+	public Jogo() {
+	}
 	public Jogo(String data, String local, int estoque, double preco) {
 		//id ser� gerado pelo banco;
 		this.data = data;

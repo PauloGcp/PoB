@@ -6,13 +6,21 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+
+@Entity
 public class IngressoGrupo extends Ingresso {
-	
-	private ArrayList<Jogo> jogos = new ArrayList<>();
+	@ManyToMany(mappedBy = "ingressos", cascade ={CascadeType.PERSIST, CascadeType.MERGE})
+	private List<Jogo> jogos = new ArrayList<>();
 	
 	public IngressoGrupo(int codigo) {
 		super(codigo);
+	}
+	public IngressoGrupo() {
 	}
 
 	public double calcularValor() {
@@ -43,7 +51,7 @@ public class IngressoGrupo extends Ingresso {
 	}
 
 	public ArrayList<Jogo> getJogos() {
-		return jogos;
+		return (ArrayList<Jogo>) jogos;
 	}
 
 	@Override
