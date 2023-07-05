@@ -24,7 +24,7 @@ public class DAOJogo extends DAO<Jogo> {
 	public List<Jogo> jogoPorData(Object chave) {
 		String data = (String) chave;
 		try {
-			TypedQuery<Jogo> q = manager.createQuery("select j from Jogo j where data=:x", Jogo.class);
+			TypedQuery<Jogo> q = manager.createQuery("select j from Jogo j where j.data=:x", Jogo.class);
 			q.setParameter("x",data);
 			return q.getResultList();
 		} catch (Exception e) {

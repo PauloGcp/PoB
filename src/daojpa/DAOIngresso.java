@@ -11,7 +11,7 @@ public class DAOIngresso extends DAO<Ingresso> {
 	public Ingresso read (Object chave) {
 		int id = (int) chave;
 		try {
-			TypedQuery<Ingresso> q = manager.createQuery("select i from Ingresso i where i.id=:x", Ingresso.class);
+			TypedQuery<Ingresso> q = manager.createQuery("select i from Ingresso i where i.codigo=:x", Ingresso.class);
 			q.setParameter('x', id);
 			return q.getSingleResult();
 
