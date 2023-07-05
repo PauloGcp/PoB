@@ -15,9 +15,6 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 public class IngressoIndividual extends Ingresso {
-	//teve que padronizar para array e tratar sempre no primeiro indice na fachada para nao dar conflito no jpa
-	@ManyToMany(mappedBy = "ingressos", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-	private List<Jogo> jogos = new ArrayList<>();
 	public IngressoIndividual() {
 	}
 
@@ -35,12 +32,12 @@ public class IngressoIndividual extends Ingresso {
 
 	public void setJogo(Jogo jogo) {
 		this.jogos.add(jogo);
-		//jogo.setEstoque(jogo.getEstoque() - 1 );
+		jogo.setEstoque(jogo.getEstoque() - 1 );
 	}
 
 	@Override
 	public String toString() {
-		return "codigo=" + codigo + ", jogo=" + jogos.get(0).getId();
+		return "codigo=" + this.getCodigo() + ", jogo=" + jogos.get(0).getId();
 	}
 	
 	

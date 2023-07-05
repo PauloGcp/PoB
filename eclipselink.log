@@ -1,98 +1,342 @@
-[EL Fine]: server: 2023-07-03 23:05:28.226--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
-[EL Config]: metadata: 2023-07-03 23:05:28.336--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Time] is set to [FIELD].
-[EL Config]: metadata: 2023-07-03 23:05:28.35--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field jogos] is being defaulted to: class modelo.Jogo.
-[EL Config]: metadata: 2023-07-03 23:05:28.351--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Ingresso] is set to [FIELD].
-[EL Config]: metadata: 2023-07-03 23:05:28.351--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.IngressoGrupo] is set to [FIELD].
-[EL Config]: metadata: 2023-07-03 23:05:28.351--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field jogos] is being defaulted to: class modelo.Jogo.
-[EL Config]: metadata: 2023-07-03 23:05:28.351--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Jogo] is set to [FIELD].
-[EL Config]: metadata: 2023-07-03 23:05:28.352--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to one mapping element [field time1] is being defaulted to: class modelo.Time.
-[EL Config]: metadata: 2023-07-03 23:05:28.352--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to one mapping element [field time2] is being defaulted to: class modelo.Time.
-[EL Config]: metadata: 2023-07-03 23:05:28.353--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field ingressos] is being defaulted to: class modelo.Ingresso.
-[EL Config]: metadata: 2023-07-03 23:05:28.354--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.IngressoIndividual] is set to [FIELD].
-[EL Config]: metadata: 2023-07-03 23:05:28.354--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field jogos] is being defaulted to: class modelo.Jogo.
-[EL Config]: metadata: 2023-07-03 23:05:28.354--ServerSession(1519736165)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Usuario] is set to [FIELD].
-[EL Config]: metadata: 2023-07-03 23:05:28.354--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Time] is being defaulted to: Time.
-[EL Config]: metadata: 2023-07-03 23:05:28.355--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Time] is being defaulted to: TIME.
-[EL Config]: metadata: 2023-07-03 23:05:28.361--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [origem] is being defaulted to: ORIGEM.
-[EL Config]: metadata: 2023-07-03 23:05:28.362--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2023-07-03 23:05:28.362--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.IngressoGrupo] is being defaulted to: IngressoGrupo.
-[EL Config]: metadata: 2023-07-03 23:05:28.362--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Ingresso] is being defaulted to: Ingresso.
-[EL Config]: metadata: 2023-07-03 23:05:28.363--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Ingresso] is being defaulted to: INGRESSO.
-[EL Config]: metadata: 2023-07-03 23:05:28.363--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [codigo] is being defaulted to: CODIGO.
-[EL Config]: metadata: 2023-07-03 23:05:28.363--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.IngressoGrupo] is being defaulted to: INGRESSOGRUPO.
-[EL Config]: metadata: 2023-07-03 23:05:28.363--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [codigo] is being defaulted to: CODIGO.
-[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Jogo] is being defaulted to: Jogo.
-[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Jogo] is being defaulted to: JOGO.
-[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [preco] is being defaulted to: PRECO.
-[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [estoque] is being defaulted to: ESTOQUE.
-[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [data] is being defaulted to: DATA.
-[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2023-07-03 23:05:28.364--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [local] is being defaulted to: LOCAL.
-[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.IngressoIndividual] is being defaulted to: IngressoIndividual.
-[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.IngressoIndividual] is being defaulted to: INGRESSOINDIVIDUAL.
-[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [codigo] is being defaulted to: CODIGO.
-[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Usuario] is being defaulted to: Usuario.
-[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Usuario] is being defaulted to: USUARIO.
-[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [senha] is being defaulted to: SENHA.
-[EL Config]: metadata: 2023-07-03 23:05:28.365--ServerSession(1519736165)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
-[EL Config]: metadata: 2023-07-03 23:05:28.373--ServerSession(1519736165)--Thread(Thread[main,5,main])--The join table name for the many to many mapping [field jogos] is being defaulted to: TIME_JOGO.
-[EL Config]: metadata: 2023-07-03 23:05:28.374--ServerSession(1519736165)--Thread(Thread[main,5,main])--The source primary key column name for the many to many mapping [field jogos] is being defaulted to: NOME.
-[EL Config]: metadata: 2023-07-03 23:05:28.374--ServerSession(1519736165)--Thread(Thread[main,5,main])--The source foreign key column name for the many to many mapping [jogos] is being defaulted to: Time_NOME.
-[EL Config]: metadata: 2023-07-03 23:05:28.374--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target primary key column name for the many to many mapping [field jogos] is being defaulted to: ID.
-[EL Config]: metadata: 2023-07-03 23:05:28.375--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target foreign key column name for the many to many mapping [jogos] is being defaulted to: jogos_ID.
-[EL Config]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field time1] is being defaulted to: NOME.
-[EL Config]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [time1] is being defaulted to: TIME1_NOME.
-[EL Config]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field time2] is being defaulted to: NOME.
-[EL Config]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [time2] is being defaulted to: TIME2_NOME.
-[EL Warning]: metadata: 2023-07-03 23:05:28.377--ServerSession(1519736165)--Thread(Thread[main,5,main])--Element [field ingressos] within entity class [class modelo.Jogo] uses a collection type [class java.util.ArrayList] when the Jakarta Persistence specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
-[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The join table name for the many to many mapping [field ingressos] is being defaulted to: JOGO_INGRESSO.
-[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The source primary key column name for the many to many mapping [field ingressos] is being defaulted to: ID.
-[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The source foreign key column name for the many to many mapping [ingressos] is being defaulted to: Jogo_ID.
-[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target primary key column name for the many to many mapping [field ingressos] is being defaulted to: CODIGO.
-[EL Config]: metadata: 2023-07-03 23:05:28.378--ServerSession(1519736165)--Thread(Thread[main,5,main])--The target foreign key column name for the many to many mapping [ingressos] is being defaulted to: ingressos_CODIGO.
-[EL Info]: 2023-07-03 23:05:28.428--ServerSession(1519736165)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 4.0.1.v202302241130
-[EL Fine]: connection: 2023-07-03 23:05:28.588--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQL10Platform
-[EL Fine]: connection: 2023-07-03 23:05:28.599--ServerSession(1519736165)--Connection(896982466)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+[EL Fine]: server: 2023-07-04 22:36:10.256--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2023-07-04 22:36:10.361--ServerSession(1076770748)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Time] is set to [FIELD].
+[EL Config]: metadata: 2023-07-04 22:36:10.373--ServerSession(1076770748)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field jogos] is being defaulted to: class modelo.Jogo.
+[EL Config]: metadata: 2023-07-04 22:36:10.375--ServerSession(1076770748)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Ingresso] is set to [FIELD].
+[EL Config]: metadata: 2023-07-04 22:36:10.375--ServerSession(1076770748)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field jogos] is being defaulted to: class modelo.Jogo.
+[EL Config]: metadata: 2023-07-04 22:36:10.375--ServerSession(1076770748)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.IngressoGrupo] is set to [FIELD].
+[EL Config]: metadata: 2023-07-04 22:36:10.375--ServerSession(1076770748)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Jogo] is set to [FIELD].
+[EL Config]: metadata: 2023-07-04 22:36:10.375--ServerSession(1076770748)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field times] is being defaulted to: class modelo.Time.
+[EL Config]: metadata: 2023-07-04 22:36:10.376--ServerSession(1076770748)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field ingressos] is being defaulted to: class modelo.Ingresso.
+[EL Config]: metadata: 2023-07-04 22:36:10.376--ServerSession(1076770748)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.IngressoIndividual] is set to [FIELD].
+[EL Config]: metadata: 2023-07-04 22:36:10.376--ServerSession(1076770748)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Usuario] is set to [FIELD].
+[EL Config]: metadata: 2023-07-04 22:36:10.376--ServerSession(1076770748)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Time] is being defaulted to: Time.
+[EL Config]: metadata: 2023-07-04 22:36:10.377--ServerSession(1076770748)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Time] is being defaulted to: TIME.
+[EL Config]: metadata: 2023-07-04 22:36:10.383--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [origem] is being defaulted to: ORIGEM.
+[EL Config]: metadata: 2023-07-04 22:36:10.384--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2023-07-04 22:36:10.385--ServerSession(1076770748)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.IngressoGrupo] is being defaulted to: IngressoGrupo.
+[EL Config]: metadata: 2023-07-04 22:36:10.385--ServerSession(1076770748)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Ingresso] is being defaulted to: Ingresso.
+[EL Config]: metadata: 2023-07-04 22:36:10.385--ServerSession(1076770748)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Ingresso] is being defaulted to: INGRESSO.
+[EL Config]: metadata: 2023-07-04 22:36:10.386--ServerSession(1076770748)--Thread(Thread[main,5,main])--The discriminator column name for the root inheritance class [modelo.Ingresso] is being defaulted to: DTYPE.
+[EL Config]: metadata: 2023-07-04 22:36:10.386--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [codigo] is being defaulted to: CODIGO.
+[EL Config]: metadata: 2023-07-04 22:36:10.386--ServerSession(1076770748)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Jogo] is being defaulted to: Jogo.
+[EL Config]: metadata: 2023-07-04 22:36:10.386--ServerSession(1076770748)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Jogo] is being defaulted to: JOGO.
+[EL Config]: metadata: 2023-07-04 22:36:10.387--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2023-07-04 22:36:10.387--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [estoque] is being defaulted to: ESTOQUE.
+[EL Config]: metadata: 2023-07-04 22:36:10.387--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [data] is being defaulted to: DATA.
+[EL Config]: metadata: 2023-07-04 22:36:10.387--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2023-07-04 22:36:10.387--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [local] is being defaulted to: LOCAL.
+[EL Config]: metadata: 2023-07-04 22:36:10.387--ServerSession(1076770748)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.IngressoIndividual] is being defaulted to: IngressoIndividual.
+[EL Config]: metadata: 2023-07-04 22:36:10.387--ServerSession(1076770748)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Usuario] is being defaulted to: Usuario.
+[EL Config]: metadata: 2023-07-04 22:36:10.387--ServerSession(1076770748)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2023-07-04 22:36:10.388--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [senha] is being defaulted to: SENHA.
+[EL Config]: metadata: 2023-07-04 22:36:10.388--ServerSession(1076770748)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
+[EL Warning]: metadata: 2023-07-04 22:36:10.395--ServerSession(1076770748)--Thread(Thread[main,5,main])--Element [field times] within entity class [class modelo.Jogo] uses a collection type [class java.util.ArrayList] when the Jakarta Persistence specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Config]: metadata: 2023-07-04 22:36:10.396--ServerSession(1076770748)--Thread(Thread[main,5,main])--The join table name for the many to many mapping [field times] is being defaulted to: JOGO_TIME.
+[EL Config]: metadata: 2023-07-04 22:36:10.396--ServerSession(1076770748)--Thread(Thread[main,5,main])--The source primary key column name for the many to many mapping [field times] is being defaulted to: ID.
+[EL Config]: metadata: 2023-07-04 22:36:10.397--ServerSession(1076770748)--Thread(Thread[main,5,main])--The source foreign key column name for the many to many mapping [times] is being defaulted to: jogos_ID.
+[EL Config]: metadata: 2023-07-04 22:36:10.397--ServerSession(1076770748)--Thread(Thread[main,5,main])--The target primary key column name for the many to many mapping [field times] is being defaulted to: NOME.
+[EL Config]: metadata: 2023-07-04 22:36:10.397--ServerSession(1076770748)--Thread(Thread[main,5,main])--The target foreign key column name for the many to many mapping [times] is being defaulted to: times_NOME.
+[EL Warning]: metadata: 2023-07-04 22:36:10.397--ServerSession(1076770748)--Thread(Thread[main,5,main])--Element [field ingressos] within entity class [class modelo.Jogo] uses a collection type [class java.util.ArrayList] when the Jakarta Persistence specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Config]: metadata: 2023-07-04 22:36:10.397--ServerSession(1076770748)--Thread(Thread[main,5,main])--The join table name for the many to many mapping [field ingressos] is being defaulted to: JOGO_INGRESSO.
+[EL Config]: metadata: 2023-07-04 22:36:10.397--ServerSession(1076770748)--Thread(Thread[main,5,main])--The source primary key column name for the many to many mapping [field ingressos] is being defaulted to: ID.
+[EL Config]: metadata: 2023-07-04 22:36:10.397--ServerSession(1076770748)--Thread(Thread[main,5,main])--The source foreign key column name for the many to many mapping [ingressos] is being defaulted to: jogos_ID.
+[EL Config]: metadata: 2023-07-04 22:36:10.398--ServerSession(1076770748)--Thread(Thread[main,5,main])--The target primary key column name for the many to many mapping [field ingressos] is being defaulted to: CODIGO.
+[EL Config]: metadata: 2023-07-04 22:36:10.398--ServerSession(1076770748)--Thread(Thread[main,5,main])--The target foreign key column name for the many to many mapping [ingressos] is being defaulted to: ingressos_CODIGO.
+[EL Warning]: metadata: 2023-07-04 22:36:10.398--ServerSession(1076770748)--Thread(Thread[main,5,main])--Element [field jogos] within entity class [class modelo.Time] uses a collection type [class java.util.ArrayList] when the Jakarta Persistence specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Warning]: metadata: 2023-07-04 22:36:10.398--ServerSession(1076770748)--Thread(Thread[main,5,main])--Element [field jogos] within entity class [class modelo.Ingresso] uses a collection type [class java.util.ArrayList] when the Jakarta Persistence specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Info]: 2023-07-04 22:36:10.454--ServerSession(1076770748)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 4.0.1.v202302241130
+[EL Fine]: connection: 2023-07-04 22:36:10.613--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQL10Platform
+[EL Fine]: connection: 2023-07-04 22:36:10.625--ServerSession(1076770748)--Connection(485845532)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
 	platform=>PostgreSQL10Platform
 	user name=> "postgres"
 	datasource URL=> "jdbc:postgresql://localhost:5432/ticket"
 ))
-[EL Config]: connection: 2023-07-03 23:05:28.738--ServerSession(1519736165)--Connection(901205084)--Thread(Thread[main,5,main])--Connected: jdbc:postgresql://localhost:5432/ticket
+[EL Config]: connection: 2023-07-04 22:36:10.664--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--Connected: jdbc:postgresql://localhost:5432/ticket
 	User: postgres
 	Database: PostgreSQL  Version: 14.8
 	Driver: PostgreSQL JDBC Driver  Version: 42.6.0
-[EL Warning]: metadata: 2023-07-03 23:05:28.744--ServerSession(1519736165)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [ingressos] for the entity class [class modelo.Jogo] since weaving was not enabled or did not occur.
-[EL Fine]: connection: 2023-07-03 23:05:28.759--ServerSession(1519736165)--Thread(Thread[main,5,main])--/file:/D:/Paulo Guilherme/Downloads/DB4O-TicketNow/DB4O-TicketNow/target/classes/_eclipselink-postgresql_url=jdbc:postgresql://localhost:5432/ticket_user=postgres login successful
-[EL Fine]: sql: 2023-07-03 23:05:28.891--ServerSession(1519736165)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME
-[EL Fine]: sql: 2023-07-03 23:05:28.901--ClientSession(742255664)--Connection(901205084)--Thread(Thread[main,5,main])--INSERT INTO TIME (NOME, ORIGEM) VALUES (?, ?)
-	bind => [teste1, origem1]
-[EL Fine]: sql: 2023-07-03 23:05:28.903--ClientSession(742255664)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME
-[EL Fine]: sql: 2023-07-03 23:05:28.914--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--INSERT INTO TIME (NOME, ORIGEM) VALUES (?, ?)
-	bind => [teste2, origem2]
-[EL Fine]: sql: 2023-07-03 23:05:28.915--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
-	bind => [teste1]
-[EL Fine]: sql: 2023-07-03 23:05:28.916--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
-	bind => [teste3]
-[EL Fine]: sql: 2023-07-03 23:05:28.918--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
-	bind => [teste3]
-[EL Fine]: sql: 2023-07-03 23:05:28.92--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO, TIME1_NOME, TIME2_NOME FROM JOGO WHERE (ID = ?)
-	bind => [999]
-[EL Fine]: sql: 2023-07-03 23:05:28.922--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO, TIME1_NOME, TIME2_NOME FROM JOGO
-[EL Fine]: sql: 2023-07-03 23:05:28.926--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+[EL Warning]: metadata: 2023-07-04 22:36:10.671--ServerSession(1076770748)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [jogos] for the entity class [class modelo.Ingresso] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2023-07-04 22:36:10.672--ServerSession(1076770748)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [times] for the entity class [class modelo.Jogo] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2023-07-04 22:36:10.672--ServerSession(1076770748)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [ingressos] for the entity class [class modelo.Jogo] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2023-07-04 22:36:10.672--ServerSession(1076770748)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [jogos] for the entity class [class modelo.Time] since weaving was not enabled or did not occur.
+[EL Fine]: connection: 2023-07-04 22:36:10.689--ServerSession(1076770748)--Thread(Thread[main,5,main])--/file:/D:/Paulo Guilherme/Downloads/DB4O-TicketNow/DB4O-TicketNow/target/classes/_eclipselink-postgresql_url=jdbc:postgresql://localhost:5432/ticket_user=postgres login successful
+[EL Fine]: sql: 2023-07-04 22:36:10.716--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--CREATE TABLE JOGO (ID  SERIAL NOT NULL, DATA VARCHAR(255), ESTOQUE INTEGER, LOCAL VARCHAR(255), PRECO FLOAT, PRIMARY KEY (ID))
+[EL Fine]: sql: 2023-07-04 22:36:10.739--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--CREATE TABLE INGRESSO (CODIGO INTEGER NOT NULL, DTYPE VARCHAR(31), PRIMARY KEY (CODIGO))
+[EL Fine]: sql: 2023-07-04 22:36:10.742--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--CREATE TABLE USUARIO (EMAIL VARCHAR(255) NOT NULL, SENHA VARCHAR(255), PRIMARY KEY (EMAIL))
+[EL Fine]: sql: 2023-07-04 22:36:10.747--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--CREATE TABLE TIME (NOME VARCHAR(255) NOT NULL, ORIGEM VARCHAR(255), PRIMARY KEY (NOME))
+[EL Fine]: sql: 2023-07-04 22:36:10.752--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--CREATE TABLE JOGO_INGRESSO (jogos_ID INTEGER NOT NULL, ingressos_CODIGO INTEGER NOT NULL, PRIMARY KEY (jogos_ID, ingressos_CODIGO))
+[EL Fine]: sql: 2023-07-04 22:36:10.754--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--CREATE TABLE JOGO_TIME (jogos_ID INTEGER NOT NULL, times_NOME VARCHAR(255) NOT NULL, PRIMARY KEY (jogos_ID, times_NOME))
+[EL Fine]: sql: 2023-07-04 22:36:10.756--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--ALTER TABLE JOGO_INGRESSO ADD CONSTRAINT FK_JOGO_INGRESSO_jogos_ID FOREIGN KEY (jogos_ID) REFERENCES JOGO (ID)
+[EL Fine]: sql: 2023-07-04 22:36:10.76--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--ALTER TABLE JOGO_INGRESSO ADD CONSTRAINT FK_JOGO_INGRESSO_ingressos_CODIGO FOREIGN KEY (ingressos_CODIGO) REFERENCES INGRESSO (CODIGO)
+[EL Fine]: sql: 2023-07-04 22:36:10.761--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--ALTER TABLE JOGO_TIME ADD CONSTRAINT FK_JOGO_TIME_jogos_ID FOREIGN KEY (jogos_ID) REFERENCES JOGO (ID)
+[EL Fine]: sql: 2023-07-04 22:36:10.763--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--ALTER TABLE JOGO_TIME ADD CONSTRAINT FK_JOGO_TIME_times_NOME FOREIGN KEY (times_NOME) REFERENCES TIME (NOME)
+[EL Fine]: sql: 2023-07-04 22:36:10.86--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME
+[EL Fine]: sql: 2023-07-04 22:36:10.867--ClientSession(385332399)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO TIME (NOME, ORIGEM) VALUES (?, ?)
+	bind => [brasil, br]
+[EL Fine]: sql: 2023-07-04 22:36:10.872--ClientSession(385332399)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME
+[EL Fine]: sql: 2023-07-04 22:36:10.874--ClientSession(1850597787)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO TIME (NOME, ORIGEM) VALUES (?, ?)
+	bind => [argentina, ar]
+[EL Fine]: sql: 2023-07-04 22:36:10.874--ClientSession(1850597787)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME
+[EL Fine]: sql: 2023-07-04 22:36:10.875--ClientSession(1850597787)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
 	bind => [brasil]
-[EL Fine]: sql: 2023-07-03 23:05:28.926--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+[EL Fine]: sql: 2023-07-04 22:36:10.878--ClientSession(259319861)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO TIME (NOME, ORIGEM) VALUES (?, ?)
+	bind => [chile, ch]
+[EL Fine]: sql: 2023-07-04 22:36:10.879--ClientSession(259319861)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME
+[EL Fine]: sql: 2023-07-04 22:36:10.879--ClientSession(259319861)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.88--ClientSession(259319861)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
 	bind => [argentina]
-[EL Fine]: sql: 2023-07-03 23:05:28.928--ClientSession(403598020)--Connection(901205084)--Thread(Thread[main,5,main])--SELECT t1.CODIGO FROM JOGO_INGRESSO t0, INGRESSOGRUPO t1 WHERE ((t0.Jogo_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+[EL Fine]: sql: 2023-07-04 22:36:10.887--ClientSession(1971152916)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO TIME (NOME, ORIGEM) VALUES (?, ?)
+	bind => [bolivia, bo]
+[EL Fine]: sql: 2023-07-04 22:36:10.888--ClientSession(1971152916)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.889--ClientSession(1971152916)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.889--ClientSession(1971152916)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.889--ClientSession(1971152916)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.896--ClientSession(1971152916)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO (DATA, ESTOQUE, LOCAL, PRECO) VALUES (?, ?, ?, ?)
+	bind => [02/12/2022, 10000, maracana, 20.0]
+[EL Fine]: sql: 2023-07-04 22:36:10.897--ClientSession(1971152916)--Connection(193388045)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2023-07-04 22:36:10.899--ClientSession(1971152916)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_TIME (times_NOME, jogos_ID) VALUES (?, ?)
+	bind => [brasil, 1]
+[EL Fine]: sql: 2023-07-04 22:36:10.9--ClientSession(1971152916)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_TIME (times_NOME, jogos_ID) VALUES (?, ?)
+	bind => [argentina, 1]
+[EL Fine]: sql: 2023-07-04 22:36:10.901--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.901--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.902--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [bolivia]
+[EL Fine]: sql: 2023-07-04 22:36:10.902--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [bolivia]
+[EL Fine]: sql: 2023-07-04 22:36:10.903--ClientSession(1893563925)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO (DATA, ESTOQUE, LOCAL, PRECO) VALUES (?, ?, ?, ?)
+	bind => [02/12/2022, 10000, maracana, 20.0]
+[EL Fine]: sql: 2023-07-04 22:36:10.904--ClientSession(1893563925)--Connection(193388045)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2023-07-04 22:36:10.904--ClientSession(1893563925)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_TIME (times_NOME, jogos_ID) VALUES (?, ?)
+	bind => [chile, 2]
+[EL Fine]: sql: 2023-07-04 22:36:10.904--ClientSession(1893563925)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_TIME (times_NOME, jogos_ID) VALUES (?, ?)
+	bind => [bolivia, 2]
+[EL Fine]: sql: 2023-07-04 22:36:10.905--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.905--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.906--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
 	bind => [1]
-[EL Fine]: sql: 2023-07-03 23:05:28.931--ClientSession(403598020)--Thread(Thread[main,5,main])--SELECT 1
-[EL Warning]: 2023-07-03 23:05:28.932--UnitOfWork(1673916398)--Thread(Thread[main,5,main])--Exception [EclipseLink-4002] (Eclipse Persistence Services - 4.0.1.v202302241130): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
-  Dica: No operator matches the given name and argument types. You might need to add explicit type casts.
-  Posição: 98
-Error Code: 0
-Call: SELECT t1.CODIGO FROM JOGO_INGRESSO t0, INGRESSOGRUPO t1 WHERE ((t0.Jogo_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+[EL Fine]: sql: 2023-07-04 22:36:10.907--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
 	bind => [1]
-Query: ReadAllQuery(name="ingressos" referenceClass=IngressoGrupo sql="SELECT t1.CODIGO FROM JOGO_INGRESSO t0, INGRESSOGRUPO t1 WHERE ((t0.Jogo_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))")
-[EL Fine]: connection: 2023-07-03 23:05:28.98--ServerSession(1519736165)--Connection(901205084)--Thread(Thread[main,5,main])--disconnect
-[EL Fine]: connection: 2023-07-03 23:05:28.98--ServerSession(1519736165)--Thread(Thread[main,5,main])--/file:/D:/Paulo Guilherme/Downloads/DB4O-TicketNow/DB4O-TicketNow/target/classes/_eclipselink-postgresql_url=jdbc:postgresql://localhost:5432/ticket_user=postgres logout successful
-[EL Fine]: connection: 2023-07-03 23:05:28.98--ServerSession(1519736165)--Connection(896982466)--Thread(Thread[main,5,main])--disconnect
+[EL Fine]: sql: 2023-07-04 22:36:10.907--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.908--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.908--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.908--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.909--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.91--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [bolivia]
+[EL Fine]: sql: 2023-07-04 22:36:10.911--ClientSession(99770475)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO (DATA, ESTOQUE, LOCAL, PRECO) VALUES (?, ?, ?, ?)
+	bind => [04/12/2022, 10000, maracana, 20.0]
+[EL Fine]: sql: 2023-07-04 22:36:10.912--ClientSession(99770475)--Connection(193388045)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2023-07-04 22:36:10.912--ClientSession(99770475)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_TIME (times_NOME, jogos_ID) VALUES (?, ?)
+	bind => [brasil, 3]
+[EL Fine]: sql: 2023-07-04 22:36:10.912--ClientSession(99770475)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_TIME (times_NOME, jogos_ID) VALUES (?, ?)
+	bind => [chile, 3]
+[EL Fine]: sql: 2023-07-04 22:36:10.913--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT NOME, ORIGEM FROM TIME WHERE (NOME = ?)
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.914--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.914--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.914--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.915--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.915--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.915--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.916--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.916--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.916--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.917--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [bolivia]
+[EL Fine]: sql: 2023-07-04 22:36:10.919--ClientSession(727860268)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO (DATA, ESTOQUE, LOCAL, PRECO) VALUES (?, ?, ?, ?)
+	bind => [04/12/2022, 10000, maracana, 20.0]
+[EL Fine]: sql: 2023-07-04 22:36:10.919--ClientSession(727860268)--Connection(193388045)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2023-07-04 22:36:10.919--ClientSession(727860268)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_TIME (times_NOME, jogos_ID) VALUES (?, ?)
+	bind => [argentina, 4]
+[EL Fine]: sql: 2023-07-04 22:36:10.92--ClientSession(727860268)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_TIME (times_NOME, jogos_ID) VALUES (?, ?)
+	bind => [bolivia, 4]
+[EL Fine]: sql: 2023-07-04 22:36:10.921--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO FROM JOGO WHERE (ID = ?)
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.922--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.922--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.922--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.923--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.923--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.923--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [bolivia]
+[EL Fine]: sql: 2023-07-04 22:36:10.924--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.924--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.924--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.925--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.925--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.925--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.934--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO FROM JOGO
+[EL Fine]: sql: 2023-07-04 22:36:10.934--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.935--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.935--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.935--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.936--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.936--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [bolivia]
+[EL Fine]: sql: 2023-07-04 22:36:10.936--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.936--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.937--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.937--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.937--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.938--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.938--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO FROM JOGO WHERE (ID = ?)
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.939--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.939--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.939--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.94--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.94--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.94--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [bolivia]
+[EL Fine]: sql: 2023-07-04 22:36:10.94--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.94--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.941--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.941--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.941--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.942--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.943--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT CODIGO, DTYPE FROM INGRESSO WHERE ((CODIGO = ?) AND (DTYPE = ?))
+	bind => [446264, IngressoGrupo]
+[EL Fine]: sql: 2023-07-04 22:36:10.944--ClientSession(26357357)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO INGRESSO (CODIGO, DTYPE) VALUES (?, ?)
+	bind => [446264, IngressoGrupo]
+[EL Fine]: sql: 2023-07-04 22:36:10.945--ClientSession(26357357)--Connection(193388045)--Thread(Thread[main,5,main])--UPDATE JOGO SET ESTOQUE = ? WHERE (ID = ?)
+	bind => [9998, 1]
+[EL Fine]: sql: 2023-07-04 22:36:10.946--ClientSession(26357357)--Connection(193388045)--Thread(Thread[main,5,main])--UPDATE JOGO SET ESTOQUE = ? WHERE (ID = ?)
+	bind => [9998, 3]
+[EL Fine]: sql: 2023-07-04 22:36:10.946--ClientSession(26357357)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_INGRESSO (ingressos_CODIGO, jogos_ID) VALUES (?, ?)
+	bind => [446264, 1]
+[EL Fine]: sql: 2023-07-04 22:36:10.947--ClientSession(26357357)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_INGRESSO (ingressos_CODIGO, jogos_ID) VALUES (?, ?)
+	bind => [446264, 3]
+[EL Fine]: sql: 2023-07-04 22:36:10.948--ClientSession(26357357)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO FROM JOGO
+[EL Fine]: sql: 2023-07-04 22:36:10.949--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO FROM JOGO WHERE (ID = ?)
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.949--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.949--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.95--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [bolivia]
+[EL Fine]: sql: 2023-07-04 22:36:10.95--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.95--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.95--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.951--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.951--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_INGRESSO t0, JOGO t1 WHERE ((t0.ingressos_CODIGO = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [446264]
+[EL Fine]: sql: 2023-07-04 22:36:10.952--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.952--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.952--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.953--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.953--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.953--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT CODIGO, DTYPE FROM INGRESSO WHERE ((CODIGO = ?) AND (DTYPE = ?))
+	bind => [268304, IngressoGrupo]
+[EL Fine]: sql: 2023-07-04 22:36:10.955--ClientSession(1251788491)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO INGRESSO (CODIGO, DTYPE) VALUES (?, ?)
+	bind => [268304, IngressoGrupo]
+[EL Fine]: sql: 2023-07-04 22:36:10.955--ClientSession(1251788491)--Connection(193388045)--Thread(Thread[main,5,main])--UPDATE JOGO SET ESTOQUE = ? WHERE (ID = ?)
+	bind => [9998, 2]
+[EL Fine]: sql: 2023-07-04 22:36:10.955--ClientSession(1251788491)--Connection(193388045)--Thread(Thread[main,5,main])--UPDATE JOGO SET ESTOQUE = ? WHERE (ID = ?)
+	bind => [9998, 4]
+[EL Fine]: sql: 2023-07-04 22:36:10.956--ClientSession(1251788491)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_INGRESSO (ingressos_CODIGO, jogos_ID) VALUES (?, ?)
+	bind => [268304, 2]
+[EL Fine]: sql: 2023-07-04 22:36:10.956--ClientSession(1251788491)--Connection(193388045)--Thread(Thread[main,5,main])--INSERT INTO JOGO_INGRESSO (ingressos_CODIGO, jogos_ID) VALUES (?, ?)
+	bind => [268304, 4]
+[EL Fine]: sql: 2023-07-04 22:36:10.956--ClientSession(1251788491)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO FROM JOGO
+[EL Fine]: sql: 2023-07-04 22:36:10.958--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT ID, DATA, ESTOQUE, LOCAL, PRECO FROM JOGO WHERE (ID = ?)
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.958--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.958--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_INGRESSO t0, JOGO t1 WHERE ((t0.ingressos_CODIGO = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [446264]
+[EL Fine]: sql: 2023-07-04 22:36:10.959--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.959--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [3]
+[EL Fine]: sql: 2023-07-04 22:36:10.959--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [brasil]
+[EL Fine]: sql: 2023-07-04 22:36:10.959--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [chile]
+[EL Fine]: sql: 2023-07-04 22:36:10.96--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.96--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_INGRESSO t0, JOGO t1 WHERE ((t0.ingressos_CODIGO = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [268304]
+[EL Fine]: sql: 2023-07-04 22:36:10.96--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.CODIGO, t1.DTYPE FROM JOGO_INGRESSO t0, INGRESSO t1 WHERE ((t0.jogos_ID = ?) AND (t1.CODIGO = t0.ingressos_CODIGO))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.961--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [4]
+[EL Fine]: sql: 2023-07-04 22:36:10.961--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [argentina]
+[EL Fine]: sql: 2023-07-04 22:36:10.961--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.ID, t1.DATA, t1.ESTOQUE, t1.LOCAL, t1.PRECO FROM JOGO_TIME t0, JOGO t1 WHERE ((t0.times_NOME = ?) AND (t1.ID = t0.jogos_ID))
+	bind => [bolivia]
+[EL Fine]: sql: 2023-07-04 22:36:10.962--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [2]
+[EL Fine]: sql: 2023-07-04 22:36:10.962--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT t1.NOME, t1.ORIGEM FROM JOGO_TIME t0, TIME t1 WHERE ((t0.jogos_ID = ?) AND (t1.NOME = t0.times_NOME))
+	bind => [1]
+[EL Fine]: sql: 2023-07-04 22:36:10.963--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--SELECT CODIGO, DTYPE FROM INGRESSO WHERE ((CODIGO = ?) AND (DTYPE = ?))
+	bind => [195927, IngressoGrupo]
+[EL Fine]: connection: 2023-07-04 22:36:10.964--ServerSession(1076770748)--Connection(193388045)--Thread(Thread[main,5,main])--disconnect
+[EL Fine]: connection: 2023-07-04 22:36:10.964--ServerSession(1076770748)--Thread(Thread[main,5,main])--/file:/D:/Paulo Guilherme/Downloads/DB4O-TicketNow/DB4O-TicketNow/target/classes/_eclipselink-postgresql_url=jdbc:postgresql://localhost:5432/ticket_user=postgres logout successful
+[EL Fine]: connection: 2023-07-04 22:36:10.964--ServerSession(1076770748)--Connection(485845532)--Thread(Thread[main,5,main])--disconnect

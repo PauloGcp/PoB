@@ -24,12 +24,12 @@ public class Jogo {
 	private String local;
 	private int estoque;
 	private double preco;
-	@OneToOne
-	private Time time1;
-	@OneToOne
-	private Time time2;
-	@ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.REMOVE})
-	private ArrayList<Ingresso> ingressos = new ArrayList<>();
+	
+	@ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+	private ArrayList<Time> times = new ArrayList<Time>();
+	
+	@ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REMOVE,})
+	private ArrayList<Ingresso> ingressos = new ArrayList<Ingresso>();
 
 	public Jogo() {
 	}
@@ -100,19 +100,19 @@ public class Jogo {
 	}
 
 	public Time getTime1() {
-		return time1;
+		return times.get(0);
 	}
 
 	public Time getTime2() {
-		return time2;
+		return times.get(1);
 	}
 	
 	public void setTime1(Time time1) {
-		this.time1 = time1;
+		this.times.add(0, time1);
 	}
 
 	public void setTime2(Time time2) {
-		this.time2 = time2;
+		this.times.add(1, time2);
 	}
 
 	public ArrayList<Ingresso> getIngressos() {
@@ -122,7 +122,7 @@ public class Jogo {
 	public String toString() {
 
 		String texto = "id=" + id + ", data=" + data + ", local=" + local + ", estoque=" + estoque + ", preco=" + preco
-				+ ", time1=" + time1.getNome() + " x time2=" + time2.getNome();
+				+ ", time1=" + times.get(0).getNome() + " x time2=" + times.get(1).getNome();
 
 		texto += "\ningressos:";
 		for(Ingresso i : ingressos)

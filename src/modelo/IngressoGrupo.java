@@ -14,8 +14,6 @@ import jakarta.persistence.ManyToMany;
 
 @Entity
 public class IngressoGrupo extends Ingresso {
-	@ManyToMany(mappedBy = "ingressos", cascade ={CascadeType.PERSIST, CascadeType.MERGE})
-	private List<Jogo> jogos = new ArrayList<>();
 	
 	public IngressoGrupo(int codigo) {
 		super(codigo);
@@ -51,12 +49,12 @@ public class IngressoGrupo extends Ingresso {
 	}
 
 	public ArrayList<Jogo> getJogos() {
-		return (ArrayList<Jogo>) jogos;
+		return jogos;
 	}
 
 	@Override
 	public String toString() {
-		String texto = "codigo=" + codigo + ", jogos:";
+		String texto = "codigo=" + this.getCodigo() + ", jogos:";
 		
 		for(Jogo j : jogos)
 			texto += j.getId() + ",";

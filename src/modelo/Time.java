@@ -20,8 +20,8 @@ public class Time {
 	@Id
 	private String nome;
 	private String origem;
-	@ManyToMany(cascade= {CascadeType.PERSIST, CascadeType.MERGE})
-	private List<Jogo> jogos = new ArrayList<>();
+	@ManyToMany(mappedBy="times",cascade= {CascadeType.PERSIST,CascadeType.MERGE})
+	private ArrayList<Jogo> jogos = new ArrayList<>();
 
 	public Time() {
 	}

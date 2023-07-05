@@ -174,40 +174,34 @@ public class Fachada {
 
 	public static IngressoIndividual criarIngressoIndividual(int id) throws Exception {
 		DAO.begin();
-		// verificar regras de negocio
 		Jogo jogo = daojogo.read(id);
-		if (jogo != null) {
-			// array com todos os id já registrados
-			ArrayList<Integer> ingressosId = new ArrayList<>();
-			for (Ingresso i : jogo.getIngressos()) {
-				ingressosId.add(i.getCodigo());
-			}
-			// gerar codigo aleat�rio
-			int codigo = new Random().nextInt(1000000);
-			// verificar unicididade do codigo no sistema
-			while (ingressosId.contains(codigo)) {
-				codigo = new Random().nextInt(1000000);
-			}
-			// criar o ingresso individual
-			IngressoIndividual ingresso = new IngressoIndividual(codigo);
-
-			// relacionar este ingresso com o jogo e vice-versa
-			ingresso.setJogo(jogo);
-			jogo.adicionar(ingresso);
-			jogo.setEstoque(jogo.getEstoque() - 1);
-			daojogo.update(jogo);
-			// gravar ingresso no banco
-			daoingressoindividual.create(ingresso);
-			try {				
-				DAO.commit();
-			} catch (Exception e){
-				System.out.println(e.getMessage());
-				DAO.rollback();
-				throw e;
-			}
-			return ingresso;
+		
+		if (jogo == null) {
+			throw new Exception("Jogo não existe");
 		}
-		throw new Exception("Jogo nao encontrado");
+		if (jogo.getEstoque() == 0) {
+			throw new Exception("O estoque não pode ser 0");
+		}
+		
+		IngressoIndividual ingressoIndividual;
+		int codigo;
+		
+		do {
+			codigo = new Random().nextInt(1000000);
+			ingressoIndividual = (IngressoIndividual) daoingressoindividual.read(codigo);
+
+		} while (ingressoIndividual != null);
+
+		ingressoIndividual = new IngressoIndividual(codigo);
+		ingressoIndividual.setJogo(jogo);
+		jogo.adicionar(ingressoIndividual);
+		daoingressoindividual.create(ingressoIndividual);
+		daojogo.update(jogo);
+		DAO.commit();
+
+
+		return ingressoIndividual;
+
 
 	}
 
